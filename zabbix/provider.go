@@ -87,7 +87,7 @@ func providerConfigure(d *schema.ResourceData, terraformVersion string) (interfa
 
 	api.SetClient(client)
 
-	if _, err := api.Login(d.Get("user").(string), d.Get("password").(string)); err != nil {
+	if _, err := api.Login(d.Get("username").(string), d.Get("password").(string)); err != nil {
 		return nil, err
 	}
 
